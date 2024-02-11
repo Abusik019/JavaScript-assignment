@@ -4,6 +4,7 @@ const resultSpan = document.getElementById('aside-counter').lastElementChild.las
 const submitBtn = document.getElementById('btn-submit');
 const finalResult = document.getElementById('result'); 
 const modalWrapper = document.getElementById('modal-wrapper');
+const modalBackground = document.getElementById('backdrop');
 const   quiz1Questions = document.getElementsByName('q1'),
         quiz2Questions = document.getElementsByName('q2'),
         quiz3Questions = document.getElementsByName('q3'),
@@ -22,4 +23,8 @@ submitBtn.addEventListener('click', (e) => {
 
     modalWrapper.style.display = 'block';
     finalResult.textContent = `${result}/5`;
+})
+
+modalBackground.addEventListener('click', () => {
+    modalWrapper.style.display = 'none';
 })
